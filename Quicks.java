@@ -1,4 +1,19 @@
 public class Quicks { // QuickSort function
+    /**
+     * QuickSort:
+     * Time Complexity:
+     * - Best Case: O(n log n) (when the pivot divides the array into two equal halves)
+     * - Average Case: O(n log n)
+     * - Worst Case: O(n^2) (when the pivot is the smallest or largest element, leading to unbalanced partitions)
+     * 
+     * Space Complexity:
+     * - O(log n) (due to recursive stack calls)
+     * 
+     * Comparison with Merge Sort:
+     * - QuickSort is generally faster in practice due to better cache performance.
+     * - MergeSort has a guaranteed O(n log n) time complexity for all cases, while QuickSort can degrade to O(n^2) in the worst case.
+     * - MergeSort requires O(n) additional space for merging, while QuickSort is in-place and requires less space.
+     */
     public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
@@ -32,6 +47,7 @@ public class Quicks { // QuickSort function
 
         return i + 1;
     }
+
     public static void main(String[] args) {
         int[] arr = {10, 7, 8, 9, 1, 5};
         int n = arr.length;
@@ -43,6 +59,4 @@ public class Quicks { // QuickSort function
             System.out.print(num + " ");
         }
     }
-
-   
 }
